@@ -35,7 +35,7 @@ TesseractというオープンソースのOCRソフトウェアと、それをPy
 - `***.jpg`の部分に、文字認識を行う画像ファイルを指定してください。  
 
 ## Explain
-[ソースコードに説明をつけたhtmlファイル](https://github.com/zashio/py_ocr/blob/master/image2text_note.html)を置いておくので、興味があったらお読みください。
+[ソースコードに説明をつけたhtmlファイル](https://github.com/zashio/py_ocr/blob/master/image2text_note.html)があるので、ブラウザで開いて、ソースの内容理解にお使いください。
 
 ## Contribution  
 お待ちしております。  
