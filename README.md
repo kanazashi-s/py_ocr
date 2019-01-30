@@ -25,3 +25,22 @@ TesseractというオープンソースのOCRソフトウェアと、それをPy
 - py_ocrフォルダ内に移動し、コンソール上で以下を実行し、必要なライブラリをインストールしてください。  
 `pip install -r requirements.txt`   
 
+### .ipynbを使う場合
+- 任意の環境で"image2text.ipynb"を開き、上から実行してください。  
+- 引数`file_name`に文字認識を行う画像ファイルを指定してください。  
+  
+### .pyを使う場合
+- コマンドライン上で、以下を実行してください。  
+`image2text.py ***.jpg`  
+- `***.jpg`の部分に、文字認識を行う画像ファイルを指定してください。  
+
+## Contribution  
+お待ちしております。  
+フォークして、新しいブランチを作ってそこに変更点をプッシュしておいてください。  
+プルリクエストもお願いします。  
+
+## Licence  
+This source is licensed under the Apache License, Version2.0
+
+## Author
+zashio
