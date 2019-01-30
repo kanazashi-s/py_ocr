@@ -69,7 +69,7 @@ def draw_boxes(image, word_boxes, color):
 def draw_texts(image, word_boxes, color):
     draw = ImageDraw.Draw(image)
 
-#    fnt = ImageFont.truetype('resource/Kokoro.otf',65)
+    fnt = ImageFont.truetype('resource/Kokoro.otf',30)
 
 #    日本語文を扱う場合には、上記のようにフォントを設定する必要がある
 #    draw.text()の引数に、font=fntを追加する。
@@ -83,7 +83,7 @@ def draw_texts(image, word_boxes, color):
         
         content = word_box.content
         
-        draw.text(draw_position, content, color)
+        draw.text(draw_position, content, color, font=fnt)
         
     return image
 
