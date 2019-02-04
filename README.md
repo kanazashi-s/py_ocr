@@ -37,11 +37,16 @@ TesseractというオープンソースのOCRソフトウェアと、それをPy
 ## エラーについて(2019/2/4追記)
 [このようなエラー](https://github.com/openpaperwork/pyocr/issues/99)がしばしば見受けられます。  
 エラーメッセージはこのような感じです↓  
+  
 `pyocr.error.TesseractError: (1, b"Error, unknown command line argument '-psm'\n")`  
   
-これは純粋に、tesseractをコマンドライン上から呼び出すときに、pyocrライブラリによって--psmと書かなければいけないところを、-psmと書いていることが原因です。  
-僕はpyocrライブラリを2019/1/29にインストールしましたが、このようなエラーが起こりました。  
-pyocrライブラリの、tesseract.py中の167行目の-psmを--psmに変更することによって、解決できます。("--psm"がreturnされればよい)  
+これは、tesseractをコマンドライン上から呼び出すときに、--psmと書かなければいけないところを、-psmと書いていることが原因です。  
+tesseractに問題goodがあるわけではなく、pyocr中の記述が原因です。
+僕はpyocrライブラリを2019/1/29にインストールしましたが、このエラーが起こりました。  
+  
+解決方法としては、pyocrライブラリの、"tesseract.py"中の167行目の"-psm"を"--psm"に変更することです。  
+(要するに、"--psm"がreturnされればよい)  
+その他のエラーの指摘もお待ちしております。  
 どうぞよしなに。
 
 ## Explain
