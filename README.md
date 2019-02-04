@@ -34,6 +34,16 @@ TesseractというオープンソースのOCRソフトウェアと、それをPy
 `image2text.py ***.jpg`  
 - `***.jpg`の部分に、文字認識を行う画像ファイルを指定してください。  
 
+## エラーについて(2019/2/4追記)
+[このようなエラー](https://github.com/openpaperwork/pyocr/issues/99)がしばしば見受けられます。  
+エラーメッセージはこのような感じです↓  
+`pyocr.error.TesseractError: (1, b"Error, unknown command line argument '-psm'\n")`  
+  
+これは純粋に、tesseractをコマンドライン上から呼び出すときに、pyocrライブラリによって--psmと書かなければいけないところを、-psmと書いていることが原因です。  
+僕はpyocrライブラリを2019/1/29にインストールしましたが、このようなエラーが起こりました。  
+pyocrライブラリの、tesseract.py中の167行目の-psmを--psmに変更することによって、解決できます。("--psm"がreturnされればよい)  
+どうぞよしなに。
+
 ## Explain
 [ソースコードに説明をつけたhtmlファイル](https://github.com/zashio/py_ocr/blob/master/image2text_note.html)があるので、ブラウザで開いて、ソースの内容理解にお使いください。
 
