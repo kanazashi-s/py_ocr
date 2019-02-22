@@ -1,4 +1,4 @@
 pyocr
 numpy
 matplotlib
-opencv_python
+pillow
