@@ -1,4 +1,4 @@
 pyocr
 numpy
 matplotlib
-opencv_python-4.0.1-cp36-cp36m-win_amd64.whl
+opencv_python
